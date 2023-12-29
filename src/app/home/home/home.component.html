@@ -1,0 +1,17 @@
+<div id="login-form-wrap">
+  <h2>Start Chat</h2>
+  <form [formGroup]="startFrom" (submit)="start()">
+    <p>
+      <input
+      [style.border-color]="startFrom.get('name').dirty && !startFrom.get('name').valid?'red':'#3ca9e2'"
+      type="text"
+      id="username"
+      name="username"
+      placeholder="Name"
+      formControlName="name">
+    </p>
+    <p>
+      <input type="button" (click)="start()" value="Start">
+    </p>
+  </form>
+</div>
